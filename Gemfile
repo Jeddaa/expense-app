@@ -81,3 +81,5 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'cancancan', '~> 1.9'
+
+gem "font-awesome-rails"
