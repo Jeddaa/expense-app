@@ -1,0 +1,29 @@
+<div class="flex flex-col w-5/6 bg-blue-500 mx-auto ">
+  <div>
+    <% if !@categories.blank? %>
+      <h1> Your categories </h1>
+        <% @categories.each do |category| %>
+          <ul class="flex gap-7 mt">
+            <li>
+              <% if category.icon.start_with?('fa') %>
+                <i class="<%= category.icon %> text-5xl" aria-hidden="true"></i>
+              <% else %>
+                <img src="<%= category.icon %>" alt="<%= category.name %>">
+              <% end %>
+            </li>
+            <li>
+              <%= category.name %>
+            </li>
+          </ul>
+        <% end %>
+    <% else %>
+      <h1> You have no categories </h1>
+    <% end %>
+  </div>
+
+    <%= link_to new_category_path do %>
+      <i class="fa-solid fa-circle-plus hover:text-blue-500 text-7xl" aria-hidden="true"></i>
+
+    <% end %>
+
+</div>

@@ -1,0 +1,12 @@
+<header class="h-16 bg-black sticky top-0">
+  <ul class="flex flex-row justify-end gap-7 p-5">
+    <% if user_signed_in? %>
+      <li><%= link_to "Expenses", items_path %></li>
+      <li><%= link_to "Categories", categories_path %></li>
+      <li><%= button_to( "Log Out", destroy_user_session_path, method: :delete ) %></li>
+    <% else %>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Log In", user_session_path %></li>
+    <% end %>
+  </ul>
+</header>

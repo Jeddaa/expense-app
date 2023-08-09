@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "category_form" %>
+
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+  <body class="flex flex-col h-screen">
+    <%= render partial: 'shared/navigation' %>
+    <p class="notice text-amber-400"><%= notice %></p>
+    <p class="alert text-amber-400"><%= alert %></p>
+    <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex flex-col">
     </main>
   </body>
 </html>

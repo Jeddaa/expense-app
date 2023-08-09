@@ -82,4 +82,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'cancancan', '~> 1.9'
 
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
+gem "font-awesome-sass"
+
