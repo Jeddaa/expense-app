@@ -1,0 +1,13 @@
+<div class="flex flex-col justify-center px-5 mx-0 w-5/6">
+  <h1 class="py-5">Add a new Expense to <%= @category.name %></h1>
+  <%= form_with(model: [@category, @item]) do |form|  %>
+    <div class="flex flex-col">
+      <%= form.label :expense_name %>
+      <%= form.text_field :name %>
+
+      <%= form.label :expense_amount %>
+      <%= form.text_field :amount %>
+    </div>
+    <%= form.submit "Add expense", class:"rounded border-2 p-2 mt-4 " %>
+  <% end %>
+</div>
