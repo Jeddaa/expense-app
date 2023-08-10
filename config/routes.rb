@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #   root "home#index"
   # end
   authenticated :user do
-    root to: "items#index", as: :authenticated_root
+    root to: "categories#index", as: :authenticated_root
   end
 
   unauthenticated :user do
@@ -20,8 +20,11 @@ Rails.application.routes.draw do
 
   # get '/users/sign_out', to: 'users#logout', as: :logout
   resources :users
-  resources :items, only: [:index, :new, :create, :destroy]
-  resources :categories, only: [:index, :new, :create, :destroy]
+  # resources :items, only: [:index, :show, :new, :create, :destroy]
+  # resources :categories, only: [:index, :show, :new, :create, :destroy]
+  resources :categories, only: %i[index show new create] do
+    resources :items, only: %i[new create]
+  end
 
   # root to: "home#index"
 

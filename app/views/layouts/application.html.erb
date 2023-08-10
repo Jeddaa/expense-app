@@ -13,12 +13,10 @@
 
   </head>
 
-  <body class="flex flex-col h-screen">
+  <body class="bg-slate-300 text-slate-900">
     <%= render partial: 'shared/navigation' %>
     <p class="notice text-amber-400"><%= notice %></p>
     <p class="alert text-amber-400"><%= alert %></p>
     <%= yield %>
-    <main class="container mx-auto mt-28 px-5 flex flex-col">
-    </main>
   </body>
 </html>

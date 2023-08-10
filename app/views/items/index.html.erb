@@ -1,21 +1,26 @@
-<div class="flex flex-col align-center justify-center">
-  <div>
+<div class="flex flex-col w-4/6 p-5 mx-auto">
+  <div class="flex flex-col justify-between">
     <% if !@items.blank? %>
-      <h1> Your Items </h1>
-      <ul>
+      <h1 class="text-center text-2xl"> EXPENSES </h1>
         <% @items.each do |item| %>
-          <li>
-            <%= item.name %>
-          </li>
+          <ul class="flex bg-white justify-between gap-7 p-5 mt-7">
+            <li>
+              <%= item.name %>
+            </li>
+            <li>
+              <%= item.amount %>
+            </li>
+          </ul>
         <% end %>
-      </ul>
     <% else %>
-      <h1> You have no items </h1>
+      <h1 class="text-center"> You have no expenses yet </h1>
     <% end %>
   </div>
 
+  <div class="flex justify-end my-4">
     <%= link_to new_item_path do %>
-      <i class="fa-solid fa-circle-plus hover:text-blue-500 text-7xl" aria-hidden="true"></i>
+      <i class="fa-solid fa-circle-plus text-emerald-700 hover:text-blue-500 text-7xl" aria-hidden="true"></i>
     <% end %>
+  </div>
 
 </div>
