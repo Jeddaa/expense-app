@@ -15,6 +15,8 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [🚀 Live Demo](#live-demo)
+    - [ Video Presentation](#video)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -65,6 +67,18 @@
 - **View the total amount of all expense**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo](https://expense-app-3t3b.onrender.com/)
+
+<!-- Presentation -->
+
+## Video Presentation <a name="video"></a>
+
+-[Presentation Video](https://www.loom.com/share/793946bd7a9e4aa4a4a42c5bc81a82eb?sid=20acb184-62dc-41bd-9384-d145ffe8251d)
 
 <!-- GETTING STARTED -->
 
