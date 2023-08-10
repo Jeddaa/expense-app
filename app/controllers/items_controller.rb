@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   def new
     @category = Category.find(params[:category_id])
     @item = @category.items.build
+    @all_categories = Category.where(author_id: current_user.id)
   end
 
   def create
@@ -12,15 +13,15 @@ class ItemsController < ApplicationController
     @item.author_id = current_user.id
 
     if @item.save
-      ItemCategory.create(item: @item, category: @category)
-      redirect_to category_path(@category), notice: 'Item was successfully added.'
+      redirect_to category_path(params[:category_id]), notice: 'Item was successfully added.'
     else
+      @all_categories = Category.where(author_id: current_user.id)
       flash.now[:alert] = 'Failed to create item.'
       render :new
     end
   end
 
   def item_params
-    params.require(:item).permit(:name, :amount)
+    params.require(:item).permit(:name, :amount, category_ids: [])
   end
 end
