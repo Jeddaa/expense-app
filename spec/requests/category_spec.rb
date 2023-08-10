@@ -33,22 +33,22 @@ RSpec.describe 'Category', type: :request do
     end
 
     it 'renders the correct placeholder for categories#index' do
-     get categories_path
+      get categories_path
       expect(response.body).to include('House')
     end
 
     it 'renders the correct placeholder for categories#show' do
-     get category_path(@category)
+      get category_path(@category)
       expect(response.body).to include('TOTAL PAYMENT')
     end
 
     it 'renders the correct item name for categories#show' do
-     get category_path(@category)
+      get category_path(@category)
       expect(response.body).to include(@item.name)
     end
 
     it 'renders the correct item amount for categories#show' do
-     get category_path(@category)
+      get category_path(@category)
       expect(response.body).to include('10')
     end
   end
@@ -76,4 +76,3 @@ RSpec.describe 'Category', type: :request do
     end
   end
 end
-
