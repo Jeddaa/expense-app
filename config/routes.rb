@@ -5,11 +5,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  # if user_signed_in?
-  #   root "items#index"
-  # else
-  #   root "home#index"
-  # end
   authenticated :user do
     root to: "categories#index", as: :authenticated_root
   end
@@ -22,8 +17,4 @@ Rails.application.routes.draw do
   resources :categories, only: %i[index show new create] do
     resources :items, only: %i[new create]
   end
-
-  # root to: "home#index"
-
-
 end
