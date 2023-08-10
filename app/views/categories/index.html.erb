@@ -34,10 +34,8 @@
     <% end %>
   </div>
 
-  <div class="flex justify-end p-10 fixed inset-x-0 bottom-0">
-    <%= link_to new_category_path do %>
-      <i class="fa-solid fa-circle-plus text-green-500 hover:text-blue-500 text-7xl" aria-hidden="true"></i>
-    <% end %>
+  <div class="flex w-full bg-green-500 border p-2 fixed inset-x-0 bottom-0 h-25">
+    <%= link_to "NEW CATEGORY", new_category_path, class: 'text-center border-2 w-full mx-7 p-5 text-white' %>
   </div>
 
 </div>
