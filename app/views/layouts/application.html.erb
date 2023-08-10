@@ -15,8 +15,8 @@
 
   <body class="bg-slate-300 text-slate-900">
     <%= render partial: 'shared/navigation' %>
-    <p class="notice text-amber-400"><%= notice %></p>
-    <p class="alert text-amber-400"><%= alert %></p>
+    <p class="notice flex w-full bg-blue-500 text-amber-400 pl-5"><%= notice %></p>
+    <p class="alert flex w-full bg-blue-500 text-red-600 p-5"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
