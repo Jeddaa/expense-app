@@ -2,9 +2,7 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # @categories = Category.includes(:author).where(author_id: current_user.id)
     @categories = Category.where(author_id: current_user.id).includes([:items]).order('created_at DESC')
-
   end
 
   def show
@@ -20,7 +18,6 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    # @category = Category.new
     @category = Category.new(category_params)
     @category.author_id = current_user.id
     if @category.save
@@ -33,5 +30,4 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:name, :icon)
   end
-
 end

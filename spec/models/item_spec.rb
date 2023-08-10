@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-
   before(:each) do
-    @user = User.create(email:'test@blog.com', password: '123456', name: 'Jedda')
+    @user = User.create(email: 'test@blog.com', password: '123456', name: 'Jedda')
     @item = Item.create(name: 'test', amount: 1000, author: @user)
   end
 
